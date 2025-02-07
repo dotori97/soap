@@ -1,0 +1,86 @@
+[
+    {
+        "id":"101",
+        "name":"동백씨 비누",
+        "image":"images/soap23.jpg",
+        "price":14000,
+        "dc_price":11200
+    },    
+    {
+        "id":"103",
+        "name":"팥 마일드 스크럽 비누",
+        "image":"images/soap18.jpg",
+        "price":13000,
+        "dc_price":9100
+    },
+    {
+        "id":"104",
+        "name":"오트밀 마일드 비누",
+        "image":"images/soap30.jpg",
+        "price":12000,
+        "dc_price":9600
+    },
+    {
+        "id":"105",
+        "name":"유자 베이비 솝",
+        "image":"images/soap20.jpg",
+        "price":14000,
+        "dc_price":11200
+    },
+    {
+        "id":"106",
+        "name":"쑥 편안 비누",
+        "image":"images/soap19.jpg",
+        "price":12000,
+        "dc_price":8400
+    },    
+    {
+        "id":"109",
+        "name":"숨 비누",
+        "image":"images/soap9.jpg",
+        "price":13000,
+        "dc_price":11700
+    },
+    {
+        "id":"111",
+        "name":"연꽃 맑음 비누",
+        "image":"images/soap25.jpg",
+        "price":12000,
+        "dc_price":10800
+    },
+    {
+        "id":"117",
+        "name":"골드에너지 비누",
+        "image":"images/soap16.jpg",
+        "price":15000,
+        "dc_price":13500
+    },
+    {
+        "id":"118",
+        "name":"당귀 윤택 비누",
+        "image":"images/soap32.jpg",
+        "price":11000,
+        "dc_price":9900
+    },
+    {
+        "id":"119",
+        "name":"호호바 영양 비누",
+        "image":"images/soap21.jpg",
+        "price":12000,
+        "dc_price":10800
+    },
+    {
+        "id":"120",
+        "name":"민트 쿨링 비누",
+        "image":"images/soap14.jpg",
+        "price":13000,
+        "dc_price":11700
+    },
+    {
+        "id":"122",
+        "name":"로즈마리 활력 비누",
+        "image":"images/soap10.jpg",
+        "price":11000,
+        "dc_price":9900
+    }
+]
