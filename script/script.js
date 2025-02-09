@@ -17,11 +17,11 @@ $(window).load(function(){
     //     img.attr("src", "images/icons/menu.png");
     //   }      
     //  });
-    //  $(".shoping").mouseover(function(){
-    //   $(".shoping-sub").toggle();
+    //  $(".shopping").mouseover(function(){
+    //   $(".shopping-sub").toggle();
     //  });
-    //  $(".shoping-sub").mouseout(function(){
-    //   $(".shoping-sub").toggle();
+    //  $(".shopping-sub").mouseout(function(){
+    //   $(".shopping-sub").toggle();
     //  });
     //  $(".community").mouseover(function(){
     //   $(".community-sub").toggle();
@@ -212,7 +212,7 @@ $(window).load(function(){
     })
 
     document.querySelectorAll(".prdPrice").forEach(item=>{
-      console.log("현재 item 내용", item.innerHTML); 
+      // console.log("현재 item 내용", item.innerHTML); 
 
       const price = item.querySelector(".price")?.textContent || "가격 없음";
       const sale = item.querySelector(".selling")?.textContent || "가격 없음";
@@ -224,7 +224,7 @@ $(window).load(function(){
         </div>
       `;   
 
-      console.log("변경 후 item 내용:", item.innerHTML);
+      // console.log("변경 후 item 내용:", item.innerHTML);
     })
 
     // setInterval(function(){
@@ -288,11 +288,21 @@ $(window).load(function(){
       }, 2000)
     });   
 
+
+    let products = [];
+    let visibleCount = 4;
+        
     fetch('best.json')
       .then(response => response.json())
-      .then(products => {
+      .then(data => {
+        products = data;
+        renderBestProducts();
+      })
+      .catch(error => console.error('상품 정보를 불러오는 데 실패했습니다:', error));
+
+      function renderBestProducts(){
         const besttList = document.getElementById('best-list');
-        besttList.innerHTML = products.map(product => `
+        besttList.innerHTML = products.slice(0, visibleCount).map(product => `
           <div class="product-card">            
             <a href="product.html?id=${product.id}">
               <img src="${product.image}" alt="${product.name}" width="300">
@@ -302,14 +312,28 @@ $(window).load(function(){
             </a>              
           </div>  
           `).join(''); 
-      })
-      .catch(error => console.error('상품 정보를 불러오는 데 실패했습니다:', error));
 
+          document.getElementById('load-more').style.display =
+            visibleCount >= products.length ? 'none' : 'block'; 
+          }
+      
+          document.getElementById('load-more').addEventListener('click', ()=>{
+            visibleCount = products.length;
+            renderBestProducts();
+          })          
+           
+    
       fetch('recommend.json')
       .then(response => response.json())
-      .then(products => {
+      .then(data => {
+        products = data;
+        renderRecommendProducts();
+      })
+      .catch(error => console.error('상품 정보를 불러오는 데 실패했습니다:', error));  
+
+      function renderRecommendProducts(){
         const recommendtList = document.getElementById('recommend-list');
-        recommendtList.innerHTML = products.map(product => `
+        recommendtList.innerHTML = products.slice(0, visibleCount).map(product => `
           <div class="product-card">            
             <a href="product.html?id=${product.id}">
               <img src="${product.image}" alt="${product.name}" width="300">
@@ -320,7 +344,132 @@ $(window).load(function(){
             </a>              
           </div>  
           `).join(''); 
-      })
-      .catch(error => console.error('상품 정보를 불러오는 데 실패했습니다:', error));
+          document.getElementById('load-more2').style.display = 
+            visibleCount >= products.length ? 'none' : 'block' ;
+          }
+       
+          document.getElementById('load-more2').addEventListener('click', ()=>{
+            visibleCount = products.length;
+            renderRecommendProducts();
+          })        
+  
+
+   
+  
+  // let allProducts = [];
+
+  // fetch('products.json')
+  //   .then(response => response.json())
+  //   .then(products=>{
+  //     console.log(products);
+
+  //     allProducts = products;
+    
+  //   const bestProducts = products.filter(product => product.best);
+  //   console.log(bestProducts);
+  //   displayProducts(bestProducts, "best-list");
+    
+  //   const recommendedProducts = products.filter(product => product.recommended);
+  //   console.log(recommendedProducts);
+  //   displayProducts(recommendedProducts, "recommend-list");
+
+  //   displayProducts(allProducts);
+  //   })
+  //   .catch(error => {
+  //     console.error("Error fetching products:", error);
+  //   })
+
+  //   function displayProducts(products, elementId="product-list"){
+  //     const productList = document.getElementById(elementId);
+  //     if(!productList) return;
+
+  //     productList.innerHTML = products.map(product => `
+  //       <div class="product-card">
+  //         <a href="product.html?id=${product.id}">
+  //           <img src="${product.image}" alt="${product.name}" width="300">
+  //           <h2>${product.name}</h2>
+  //           <p>정가: ${product.price}원</p>
+  //           <p>할인가: ${product.dc_price}원</p>          
+  //         </a>
+  //       </div>  
+  //       `).join('');
+  //   }
+
+  //   document.getElementById("filter-moisture").addEventListener("click", ()=>{
+  //     filterProducts({category: "보습"});      
+  //   })
+
+  //   document.getElementById("filter-brightening").addEventListener("click", ()=>{
+  //     filterProducts({category: "미백"});      
+  //   })
+
+  //   document.getElementById("filter-firming").addEventListener("click", ()=>{
+  //     filterProducts({category: "탄력증진"});      
+  //   })
+
+  //   document.getElementById("filter-nourishing").addEventListener("click", ()=>{
+  //     filterProducts({category: "영양공급"});      
+  //   })
+
+  //   document.getElementById("filter-troublecare").addEventListener("click", ()=>{
+  //     filterProducts({category: "트러블케어"});      
+  //   })
+
+  //   document.getElementById("filter-sebum").addEventListener("click", ()=>{
+  //     filterProducts({category: "피지조절"});      
+  //   })
+
+  //   document.getElementById("skin-dry").addEventListener("click", ()=>{
+  //     filterProducts({skin_type: "건성"});      
+  //   })
+
+  //   document.getElementById("skin-oil").addEventListener("click", ()=>{
+  //     filterProducts({skin_type: "지성"});      
+  //   })
+
+  //   document.getElementById("skin-combination").addEventListener("click", ()=>{
+  //     filterProducts({skin_type: "복합성"});      
+  //   })
+
+  //   document.getElementById("skin-sensitive").addEventListener("click", ()=>{
+  //     filterProducts({skin_type: "민감성"});      
+  //   })
+
+  //   document.getElementById("skin-all").addEventListener("click", ()=>{
+  //     filterProducts({skin_type: "모든 피부"});      
+  //   })
+
+  //   document.getElementById("filter-kids").addEventListener("click", ()=>{
+  //     filterProducts({usage: "유아"});      
+  //   })
+
+  //   document.getElementById("filter-hair").addEventListener("click", ()=>{
+  //     filterProducts({usage: "모발"});      
+  //   })
+
+  //   document.getElementById("filter-body").addEventListener("click", ()=>{
+  //     filterProducts({usage: "바디"});      
+  //   })
+    
+
+  //   function filterProducts({category, skin_type, usage}){
+  //     let filtered = allProducts;
+
+  //     if(category){
+  //       filtered = filtered.filter(product => product.category === category);
+  //     }
+
+  //     if(skin_type){
+  //       filtered = filtered.filter(product => product.skin_type === skin_type);
+  //     }
+
+  //     if(usage){
+  //       filtered = filtered.filter(product => product.usage === usage);
+  //     }
+
+  //     console.log("Filtered Products:", filtered);
+  //     displayProducts(filtered, "filter-list");
+  //   }
+  
 });
 

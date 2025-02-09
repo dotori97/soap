@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", function(){
                      img.attr("src", "images/icons/menu.png");
                    }      
                   });
-                  $(".shoping").mouseover(function(){
-                   $(".shoping-sub").toggle();
+                  $(".shopping").mouseover(function(){
+                   $(".shopping-sub").toggle();
                   });
-                  $(".shoping-sub").mouseout(function(){
-                   $(".shoping-sub").toggle();
+                  $(".shopping-sub").mouseout(function(){
+                   $(".shopping-sub").toggle();
                   });
                   $(".community").mouseover(function(){
                    $(".community-sub").toggle();

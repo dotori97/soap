@@ -4,160 +4,275 @@
         "name":"동백씨 비누",
         "image":"images/soap23.jpg",
         "price":14000,
-        "dc_price":11200
+        "dc_price":11200,
+        "category": "보습, 영양공급",
+        "skin_type": "모든 피부",
+        "usage": "모발",
+        "best": true,
+        "recommended": true
     },
     {
         "id":"102",
         "name":"황련 클린 비누",
         "image":"images/soap27.jpg",
         "price":13000,
-        "dc_price":10400
+        "dc_price":10400,
+        "category": "피지조절, 트러블케어",
+        "skin_type": "지성",
+        "usage": "페이스",
+        "best": false,
+        "recommended": true
     },
     {
         "id":"103",
         "name":"팥 마일드 스크럽 비누",
         "image":"images/soap18.jpg",
         "price":13000,
-        "dc_price":9100
+        "dc_price":9100,
+        "category": "각질제거, 보습",
+        "skin_type": "건성",
+        "usage": "바디",
+        "best": true,
+        "recommended": false
     },
     {
         "id":"104",
         "name":"오트밀 마일드 비누",
         "image":"images/soap30.jpg",
         "price":12000,
-        "dc_price":9600
+        "dc_price":9600,
+        "category": "보습",
+        "skin_type": "민감성",
+        "usage": "유아",
+        "best": true,
+        "recommended": true
     },
     {
         "id":"105",
         "name":"유자 베이비 솝",
         "image":"images/soap20.jpg",
         "price":14000,
-        "dc_price":11200
+        "dc_price":11200,
+        "category": "보습, 미백",
+        "skin_type": "건성",
+        "usage": "유아",
+        "best": true,
+        "recommended": true
     },
     {
         "id":"106",
         "name":"쑥 편안 비누",
         "image":"images/soap19.jpg",
         "price":12000,
-        "dc_price":8400
+        "dc_price":8400,
+        "category": "보습",
+        "skin_type": "민감성",
+        "usage": "페이스",
+        "best": true,
+        "recommended": true
     },
     {
         "id":"107",
         "name":"치자 브라이트 비누",
         "image":"images/soap29.jpg",
         "price":12000,
-        "dc_price":9600
+        "dc_price":9600,
+        "category": "미백, 보습",
+        "skin_type": "복합성",
+        "usage": "페이스",
+        "best": false,
+        "recommended": false
     },
     {
         "id":"108",
         "name":"두피건강 구기자 비누",
         "image":"images/soap24.jpg",
         "price":13000,
-        "dc_price":10400
+        "dc_price":10400,
+        "category": "탈모케어",
+        "skin_type": "모든 피부",
+        "usage": "모발",
+        "best": true,
+        "recommended": false
     },
     {
         "id":"109",
         "name":"숨 비누",
         "image":"images/soap9.jpg",
         "price":13000,
-        "dc_price":11700
+        "dc_price":11700,
+        "category": "보습, 트러블케어",
+        "skin_type": "민감성",
+        "usage": "페이스",
+        "best": true,
+        "recommended": true
     },
     {
         "id":"110",
         "name":"감초 촉촉 비누",
         "image":"images/soap11.jpg",
         "price":12000,
-        "dc_price":10800
+        "dc_price":10800,
+        "category": "미백",
+        "skin_type": "민감성",
+        "usage": "페이스",
+        "best": false,
+        "recommended": true
     },
     {
         "id":"111",
         "name":"연꽃 맑음 비누",
         "image":"images/soap25.jpg",
         "price":12000,
-        "dc_price":10800
+        "dc_price":10800,
+        "category": "보습, 미백",
+        "skin_type": "건성",
+        "usage": "페이스",
+        "best": true,
+        "recommended": false
     },
     {
         "id":"112",
         "name":"녹차 프레쉬 비누",
         "image":"images/soap22.jpg",
         "price":11000,
-        "dc_price":10000
+        "dc_price":10000,
+        "category": "모공, 피지조절",
+        "skin_type": "지성",
+        "usage": "페이스",
+        "best": false,
+        "recommended": false
     },
     {
         "id":"113",
         "name":"녹두 맑은 비누",
         "image":"images/soap26.jpg",
         "price":13000,
-        "dc_price":11700
+        "dc_price":11700,
+        "category": "보습",
+        "skin_type": "건성",
+        "usage": "페이스",
+        "best": false,
+        "recommended": false
     },
     {
         "id":"114",
         "name":"고삼 순한 비누",
         "image":"images/soap17.jpg",
         "price":13000,
-        "dc_price":11700
+        "dc_price":11700,
+        "category": "보습, 트러블케어",
+        "skin_type": "지성, 복합성",
+        "usage": "페이스",
+        "best": false,
+        "recommended": true
     },
     {
         "id":"115",
         "name":"천궁 활력 비누",
         "image":"images/soap31.jpg",
         "price":13000,
-        "dc_price":11700
+        "dc_price":11700,
+        "category": "탄력증진",
+        "skin_type": "건성",
+        "usage": "페이스",
+        "best": false,
+        "recommended": false
     },
     {
         "id":"116",
         "name":"지황 탄력 비누",
         "image":"images/soap33.jpg",
         "price":13000,
-        "dc_price":11700
+        "dc_price":11700,
+        "category": "보습, 탄력증진",
+        "skin_type": "건성, 복합성",
+        "usage": "페이스",
+        "best": true,
+        "recommended": true
     },
     {
         "id":"117",
         "name":"골드에너지 비누",
         "image":"images/soap16.jpg",
         "price":15000,
-        "dc_price":13500
+        "dc_price":13500,
+        "category": "영양공급, 탄력증진",
+        "skin_type": "건성",
+        "usage": "페이스",
+        "best": true,
+        "recommended": true
     },
     {
         "id":"118",
         "name":"당귀 윤택 비누",
         "image":"images/soap32.jpg",
         "price":11000,
-        "dc_price":9900
+        "dc_price":9900,
+        "category": "영양공급, 미백",
+        "skin_type": "복합성",
+        "usage": "페이스",
+        "best": true,
+        "recommended": true
     },
     {
         "id":"119",
         "name":"호호바 영양 비누",
         "image":"images/soap21.jpg",
         "price":12000,
-        "dc_price":10800
+        "dc_price":10800,
+        "category": "영양공급",
+        "skin_type": "지성",
+        "usage": "페이스",
+        "best": true,
+        "recommended": false
     },
     {
         "id":"120",
         "name":"민트 쿨링 비누",
         "image":"images/soap14.jpg",
         "price":13000,
-        "dc_price":11700
+        "dc_price":11700,
+        "category": "피지조절",
+        "skin_type": "모든 피부",
+        "usage": "모발, 바디",
+        "best": true,
+        "recommended": true
     },
     {
         "id":"121",
         "name":"카모마일 릴렉스 비누",
         "image":"images/soap10.jpg",
         "price":11000,
-        "dc_price":9900
+        "dc_price":9900,
+        "category": "트러블케어",
+        "skin_type": "민감성",
+        "usage": "페이스",
+        "best": false,
+        "recommended": true
     },
     {
         "id":"122",
         "name":"로즈마리 활력 비누",
         "image":"images/soap10.jpg",
         "price":11000,
-        "dc_price":9900
+        "dc_price":9900,
+        "category": "탄력증진",
+        "skin_type": "복합성",
+        "usage": "페이스",
+        "best": true,
+        "recommended": false
     },
     {
         "id":"123",
         "name":"검은깨 영양 비누",
         "image":"images/soap15.jpg",
         "price":13000,
-        "dc_price":11700
+        "dc_price":11700,
+        "category": "보습",
+        "skin_type": "건성",
+        "usage": "페이스",
+        "best": false,
+        "recommended": true
     }
 ]

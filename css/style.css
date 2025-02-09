@@ -150,7 +150,7 @@ ul{
         margin-left: 30%;
     }
 }
-.shoping-sub{
+.shopping-sub{
     position: absolute;
     width:100%;
     background-color: white;
@@ -676,6 +676,20 @@ ul{
         font-weight: 100;        
         padding-bottom: 30px;
     }
+    button{
+        width: 8%;
+        height:40px;
+        background-color: var(--green-color);
+        color:var(--white-color);
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 10px;
+    }
+    button:hover{
+        background-color: #90976a;
+        cursor: pointer;
+    }
 }
 
 #best-list{
@@ -723,6 +737,8 @@ ul{
     font-weight: bold;
 }
   
+
+
   /* 
   p:last-child → <p>가 항상 마지막 요소라면 이 방법이 가장 간단함.
   p:nth-of-type(2) → <p> 태그가 여러 개일 가능성이 있으면 더 명확함.
@@ -744,6 +760,20 @@ ul{
     >p{
         font-weight: 100;        
         padding-bottom: 30px;
+    }
+    button{
+        width: 8%;
+        height:40px;
+        background-color: var(--green-color);
+        color:var(--white-color);
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 10px;
+    }
+    button:hover{
+        background-color: #90976a;
+        cursor: pointer;
     }
 }
 
@@ -830,4 +860,25 @@ ul{
 .menuCopy-inner{
     text-align: center;
     margin-left: 5%;
+}
+
+.product{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter-list{
+    width:100%;
+    display: flex;
+}
+
+.shopping-list{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    gap: 20px;
+    padding: 20px;
 }
