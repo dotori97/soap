@@ -800,33 +800,265 @@ ul{
 
 #product-detail{
     background-color: white;
-    margin: 50px auto;
-    padding:20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px;           
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 
-    img{
+    >img{
         width:50%;
         border-radius: 10px;
-        margin-bottom: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding:20px;
     }
 
+    >div{
+        width:40%;
+        margin: 10px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
     h1{
         font-size: 24px;
-        margin-bottom: 15px;
+        margin: 7px 0;
     }
 
     p{
         font-size: 18px;
         color:#555;
+        margin-bottom:10px;        
     }
-    .back{
-        margin:10px;
+    .info{
+        display: flex;
     }
-    a{        
-        color:#333;
+    .info1{
+        background-color: #7d8453;
+        border: none;
+        border-radius:5px;
+        padding: 6px;
+        margin-top: 3px;
+        margin-bottom: 15px;
+        margin-right: 5px;
+        font-size: 14px;
+        color: #fff;
     }
+    .info2{
+        background-color: #e0a62b;
+        border: none;
+        border-radius: 5px;
+        padding: 6px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color:#fff;
+    }
+    .option{
+        font-size: 18px;
+        margin-top: 8px;
+        margin-bottom: 13px;
+        text-align: left;
+
+        >p{
+            font-size: 20px;           
+        }
+        input{
+            margin-bottom: 10px;
+        }
+    }
+
+    .final{
+        display: flex;
+        align-self: flex-end;
+        padding-right: 20px;
+    }
+    
+    /* select{
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        margin-bottom: 25px;
+    } */
+    hr{
+        color:#555;
+        width:100%;
+        margin: 15px 0px;
+    }
+    
+    .count{
+        width:100%;
+        border: none;
+        border-radius: 3px;
+        background-color: rgb(220, 220, 220);
+        padding:20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;     
+        
+    }   
+                   
+    .quantity-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* border: 1px solid #a2a2a2;
+        border-radius: 3px; */
+        width: 30%;
+        font-size: 17px;
+        
+        button{
+            width:30%;
+            padding:5px;
+        }
+    }
+
+    #final-amount{
+        display: flex;
+        justify-content: flex-end;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .payment{
+        width: 100%;        
+        margin-top: 65px;
+
+        .purchase{
+            width:100%;
+            display: flex;
+            gap:2%;
+            
+            .basket{
+                width:49%;
+                border: 1px solid #222;
+                padding: 15px;
+            }
+            .buy{
+                width:49%;
+                border:none;
+                background-color: #81ac31;
+                color: #fff;
+                padding: 15px;
+            }
+        }
+    
+        .sns-payment{
+            width:100%;           
+            /* aspect-ratio: 8 / 1; */
+            position: relative;
+            padding-top: 21%;
+                        
+            .naver{
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                top:0;
+                left:0;                
+                height: 49%;
+                padding-bottom: 1%;
+
+                .naver-ptag{
+                    width:34%;
+                    p{
+                        font-size: 1vw;
+                        margin:0;
+                    }                   
+                }
+                .naver-logo{
+                    width:40%;   
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }                       
+                }
+                .jjim{
+                    width:12%;
+                    border: 1px solid lightgray;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.4vw;
+                    
+                }
+                .naver-talk{
+                    width:12%;
+                    border: 1px solid lightgray;
+                    border-radius: 5px;
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+                
+            }
+    
+            .kakao{
+                width: 80%;
+                display: flex;            
+                justify-content: space-between;    
+                position: absolute;
+                top:49%;
+                left:0;                
+                height: 50%;
+                padding-bottom: 1%;
+                
+                .kakao-ptag{
+                    width:34%;
+                    p{
+                        font-size: 1vw;
+                        margin:0;
+                    } 
+                }
+                .kakao-logo{
+                    width:40%;                     
+                    border-radius: 5px;
+
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }                       
+                }
+                .jjim{
+                    width:12%;
+                    border: 1px solid lightgray;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.4vw;
+                }
+                .kakao-ch{
+                    width:12%;
+                    border: 1px solid lightgray;
+                    border-radius: 5px;
+                    
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+            }
+    
+        }
+    }   
 }
+    
+#selected-options {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.option-count{
+    width:100%;
+    border: none;        
+    padding:20px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;             
+}  
 
 .page-footer{
     width: 100%;
@@ -870,15 +1102,35 @@ ul{
 
 #filter-list{
     width:100%;
-    display: flex;
-}
-
-.shopping-list{
-    width: 90%;
+    height:500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
-    gap: 20px;
+}
+
+
+.shopping-list{
+    width: 100%;       
+}
+
+.shopping-category{
+    display: flex;
+    justify-content: space-around;
+    gap:20px;
+    padding: 20px; 
+}
+
+.best-page{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.best-list{
+    width:90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap:20px;
     padding: 20px;
 }

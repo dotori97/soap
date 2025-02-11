@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>쇼핑</title>
+    <title>전체 상품</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="product">
-        <div id="filter-list"></div>
+    <section class="product">        
         <div class="shopping-list">
-            <ul>
+            <ul class="shopping-category">
                 <li><a href="">기능별</a>
                     <ul class="sub">
                         <li id="filter-moisture"><a href="">보습</a></li>
@@ -36,7 +35,8 @@
                 <li id="filter-set"><a href="">세트할인</a></li>
                 <li id="filter-pack"><a href="">선물포장</a></li>
             </ul>    
-        </div>
+        </div>        
+        <div id="filter-list"></div> 
     </section>
     <footer class="page-footer">
         <div class="foot-logo">
@@ -56,6 +56,6 @@
     </footer>   
     <script src="script/jquery-1.12.3.js"></script>
     <script src="script/header.js"></script>    
-    <script src="script/script.js"></script>
+    <script src="script/shopping.js"></script>
 </body>
 </html>
