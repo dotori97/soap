@@ -1110,20 +1110,29 @@ ul{
     padding: 20px;
 }
 
+.shopping-product{
+    hr{        
+        margin: 25px 0;
+    }
+}
 
 .shopping-list{
     width: 100%;       
+    h2{        
+        padding-top: 50px;
+    }    
 }
 
 .shopping-category{
     display: flex;    
     gap:20px;
-    padding: 50px;  
-    padding-bottom: 70px;   
+    padding: 40px; 
+    padding-bottom: 60px; 
+    padding-left: 20%;
     div{
         display: flex; 
         flex-direction: column;       
-        padding-left: 10%;
+        padding-left: 5%;
 
         >li{
             display: flex;
@@ -1150,7 +1159,7 @@ ul{
                 }
             }
         }
-    }
+    }   
 }
 
 
