@@ -1116,32 +1116,37 @@ ul{
 }
 
 .shopping-category{
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    padding: 20px;  
-    padding-bottom: 50px;   
-    >li{
-        display: flex;        
-        padding-left: 120px;
-        >a {
-            font-weight: bold;
-            color: #222;
-            font-size: 17px;
+    display: flex;    
+    gap:20px;
+    padding: 50px;  
+    padding-bottom: 70px;   
+    div{
+        display: flex; 
+        flex-direction: column;       
+        padding-left: 10%;
+
+        >li{
+            display: flex;
+            >a {
+                font-weight: bold;
+                color: #222;
+                font-size: 19px;
+            }
         }
-        >ul{
+        .sub{
             display: flex;
             padding-left: 20px;
-            >li{
-                padding-left: 20px;
-                a {
+        
+            li{
+                padding-left: 10px;
+                a {                    
                     color: #333;
                     transition: color 0.3s;
                 }
                 
                 a:hover {
                     color: #377a47;
-                    font-weight: bold;
+                    font-weight: bold;`
                 }
             }
         }

@@ -355,42 +355,97 @@ $(window).load(function(){
     //       })        
      
   
-  let allProducts = [];
-
-  fetch('products.json')
-    .then(response => response.json())
-    .then(products=>{
+  // let allProducts = [];
+  
+  // fetch('products.json')
+  //   .then(response => response.json())
+  //   .then(products=>{
       
-      allProducts = products;
+  //     allProducts = products;
     
-    const bestProducts = products.filter(product => product.best);    
-    displayProducts(bestProducts, "best-list");
+  //   const bestProducts = products.filter(product => product.best);    
+  //   displayProducts(bestProducts, "best-list");
     
-    const recommendedProducts = products.filter(product => product.recommended);
-    displayProducts(recommendedProducts, "recommend-list");
+  //   const recommendedProducts = products.filter(product => product.recommended);
+  //   displayProducts(recommendedProducts, "recommend-list");
 
-    displayProducts(allProducts);
-    })
-    .catch(error => {
-      console.error("Error fetching products:", error);
-    })
+  //   displayProducts(allProducts);
+  //   })
+  //   .catch(error => {
+  //     console.error("Error fetching products:", error);
+  //   })
 
-    function displayProducts(products, elementId="filter-list"){
-      const productList = document.getElementById(elementId);
-      if(!productList) return;
+  //   function displayProducts(products, elementId="filter-list"){
+  //     const productList = document.getElementById(elementId);
+  //     if(!productList) return;
 
-      productList.innerHTML = products.map(product => `
-        <div class="product-card">
-          <a href="product.html?id=${product.id}">
-            <img src="${product.image}" alt="${product.name}" width="300">
-            <h2>${product.name}</h2>
-            <p>정가: ${product.price}원</p>
-            <p>할인가: ${product.dc_price}원</p>          
-          </a>
-        </div>  
-        `).join('');
-    }
-  
-  
+  //     productList.innerHTML = products.map(product => `
+  //       <div class="product-card">
+  //         <a href="product.html?id=${product.id}">
+  //           <img src="${product.image}" alt="${product.name}" width="300">
+  //           <h2>${product.name}</h2>
+  //           <p>정가: ${product.price}원</p>
+  //           <p>할인가: ${product.dc_price}원</p>          
+  //         </a>
+  //       </div>  
+  //       `).join('');
+       
+  //     }
+       
+let allProducts=[];
+let bestProducts=[];
+let recommendedProducts=[];
+let visibleBestCount=4;
+let visibleRecommendCount=4;
+
+fetch('products.json')
+  .then(response => response.json())
+  .then(products =>{
+    allProducts = products;
+
+    bestProducts = allProducts.filter(product => product.best);
+    recommendedProducts = allProducts.filter(product => product.recommended);
+
+    displayProducts(bestProducts.slice(0, visibleBestCount), "best-list");
+    displayProducts(recommendedProducts.slice(0, visibleRecommendCount), "recommend-list")
+  })
+  .catch(error => {
+    console.error("Error fetching products:", error);
+  });
+
+  function displayProducts(products, elementId){
+    const productList = document.getElementById(elementId);
+    if(!productList) return;
+
+    productList.innerHTML = products.map(product => `
+       <div class="product-card">
+         <a href="product.html?id=${product.id}">
+           <img src="${product.image}" alt="${product.name}" width="300">
+           <h2>${product.name}</h2>
+           <p>정가: ${product.price}원</p>
+           <p>할인가: ${product.dc_price}원</p>          
+         </a>
+       </div>  
+       `).join('');
+      
+      if(elementId === "best-list"){
+        document.getElementById('load-more').style.display = 
+          visibleBestCount >= bestProducts.length ? 'none': 'block';
+      }else if (elementId === "recommend-list"){
+        document.getElementById('load-more2').style.display =
+          visibleRecommendCount >= recommendedProducts.length ? 'none' : 'block';
+      }
+  }
+
+    document.getElementById('load-more').addEventListener('click', ()=>{
+      visibleBestCount = bestProducts.length;
+      displayProducts(bestProducts.slice(0, visibleBestCount), "best-list");
+    });
+
+    document.getElementById('load-more2').addEventListener('click', ()=>{
+      visibleRecommendCount = recommendedProducts.length;
+      displayProducts(recommendedProducts.slice(0, visibleRecommendCount), "recommend-list");
+    });
+
 });
 

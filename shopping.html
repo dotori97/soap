@@ -9,31 +9,36 @@
 <body>
     <section class="product">        
         <div class="shopping-list">
-            <ul class="shopping-category">
-                <li><a href="#">기능별</a>
-                    <ul class="sub">
-                        <li id="filter-moisture"><a href="#">보습</a></li>
-                        <li id="filter-brightening"><a href="#">미백</a></li>
-                        <li id="filter-sebum" ><a href="#">피지조절</a></li>
-                        <li id="filter-troublecare"><a href="#">트러블케어</a></li>
-                        <li id="filter-firming"><a href="#">탄력증진</a></li>
-                        <li id="filter-nourishing"><a href="#">영양공급</a></li>
-                    </ul>
-                </li>
-                <li><a href="">타입별</a>
-                    <ul class="sub">
-                        <li id="skin-dry"><a href="#">건성</a></li>
-                        <li id="skin-oil"><a href="#">지성</a></li>
-                        <li id="skin-combination"><a href="#">복합성</a></li>
-                        <li id="skin-sensitive"><a href="#">민감성</a></li> 
-                        <li id="skin-all"><a href="#">모든피부</a></li>
-                    </ul>    
-                </li>
-                <li id="filter-kids"><a href="#">유아</a></li>
-                <li id="filter-hair"><a href="#">헤어</a></li>
-                <li id="filter-body"><a href="#">바디</a></li>
-                <li id="filter-set"><a href="#">세트할인</a></li>
-                <li id="filter-pack"><a href="#">선물포장</a></li>
+            <ul class="shopping-category">      
+                <div>      
+                    <li><a href="#">기능별</a>
+                        <ul class="sub">
+                            <li><a href="#" class="filter-btn" data-filter="moisture">보습</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="brightening">미백</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="sebum" >피지조절</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="troublecare">트러블케어</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="firming">탄력증진</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="nourishing">영양공급</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">타입별</a>
+                        <ul class="sub">
+                            <li><a href="#" class="filter-btn" data-filter="dry">건성</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="oil">지성</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="combination">복합성</a></li>
+                            <li><a href="#" class="filter-btn" data-filter="sensitive">민감성</a></li> 
+                            <li><a href="#" class="filter-btn" data-filter="all">모든피부</a></li>
+                        </ul>    
+                    </li>
+                </div>
+                <div>
+                    <li><a href="#" class="filter-btn" data-filter="hair">헤어</a></li>
+                    <li><a href="#" class="filter-btn" data-filter="body">바디</a></li>
+                </div>
+                <div>
+                    <li><a href="#" class="filter-btn" data-filter="kids">유아</a></li>
+                    <li><a href="#" class="filter-btn" data-filter="set">세트할인</a></li>
+                </div>
             </ul>    
         </div>        
         <div id="filter-list"></div> 

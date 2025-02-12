@@ -6,7 +6,7 @@
         "price":14000,
         "dc_price":11200,
         "category": "보습, 영양공급",
-        "skin_type": "모든 피부",
+        "skin_type": "모든피부",
         "usage": "모발",
         "best": true,
         "recommended": true
@@ -90,7 +90,7 @@
         "price":13000,
         "dc_price":10400,
         "category": "탈모케어",
-        "skin_type": "모든 피부",
+        "skin_type": "모든피부",
         "usage": "모발",
         "best": true,
         "recommended": false
@@ -234,7 +234,7 @@
         "price":13000,
         "dc_price":11700,
         "category": "피지조절",
-        "skin_type": "모든 피부",
+        "skin_type": "모든피부",
         "usage": "모발, 바디",
         "best": true,
         "recommended": true
