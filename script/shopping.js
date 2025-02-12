@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
         
         allProducts = products;       
   
-    //   displayProducts(allProducts);
+      displayProducts(allProducts, "fillter-list");
       })
       .catch(error => {
         console.error("Error fetching products:", error);
@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function(){
       function displayProducts(products, elementId = "filter-list"){
         const productList = document.getElementById(elementId);
         if(!productList) return;
+
+        if(products.length===0){
+          productList.innerHTML=`<p>검색 결과가 없습니다.</p>`;
+          return;
+        }
   
         productList.innerHTML = products.map(product => `
           <div class="product-card">
@@ -85,6 +90,21 @@ document.addEventListener("DOMContentLoaded", function(){
         filterProducts({usage: "바디"});      
       })
       
+
+      document.querySelectorAll(".shopping-category a").forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // 기본 동작(최상단 이동) 막기
+        });
+    });
+    
+  //   document.addEventListener("click", function (event) {
+  //     if (event.target.classList.contains("filter-btn")) {
+  //         event.preventDefault(); // 페이지 새로고침 방지
+  //         const filterType = event.target.dataset.filter; // data-filter 값 가져오기
+  //         filterProducts(filterType); // 필터링 함수 실행
+  //     }
+  // });
+  
      
       function filterProducts({category, skin_type, usage}){
         let filtered = allProducts;
@@ -109,8 +129,31 @@ document.addEventListener("DOMContentLoaded", function(){
         }
       }
 
-    //   if(allProducts.length>0){
-    //     displayProducts(allProducts, "filter-list");
-    //   }
+    //   const filters = [
+    //     { id: "filter-moisture", filter: { category: "보습" } },
+    //     { id: "filter-brightening", filter: { category: "미백" } },
+    //     { id: "filter-firming", filter: { category: "탄력증진" } },
+    //     { id: "filter-nourishing", filter: { category: "영양공급" } },
+    //     { id: "filter-troublecare", filter: { category: "트러블케어" } },
+    //     { id: "filter-sebum", filter: { category: "피지조절" } },
+    //     { id: "skin-dry", filter: { skin_type: "건성" } },
+    //     { id: "skin-oil", filter: { skin_type: "지성" } },
+    //     { id: "skin-combination", filter: { skin_type: "복합성" } },
+    //     { id: "skin-sensitive", filter: { skin_type: "민감성" } },
+    //     { id: "skin-all", filter: { skin_type: "모든 피부" } },
+    //     { id: "filter-kids", filter: { usage: "유아" } },
+    //     { id: "filter-hair", filter: { usage: "모발" } },
+    //     { id: "filter-body", filter: { usage: "바디" } }
+    // ];
 
-})
+    // filters.forEach(({ id, filter }) => {
+    //     const element = document.getElementById(id);
+    //     if (element) {
+    //         element.addEventListener("click", (even) => {              
+    //           event.preventDefault();
+    //           filterProducts(filter)});
+    //     }
+    // }); 
+
+});
+

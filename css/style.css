@@ -1101,11 +1101,13 @@ ul{
 }
 
 #filter-list{
-    width:100%;
-    height:500px;
+    width:100%;   
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
+    gap: 20px;
+    padding: 20px;
 }
 
 
@@ -1115,10 +1117,37 @@ ul{
 
 .shopping-category{
     display: flex;
-    justify-content: space-around;
-    gap:20px;
-    padding: 20px; 
+    flex-direction: column;
+    gap:10px;
+    padding: 20px;  
+    padding-bottom: 50px;   
+    >li{
+        display: flex;        
+        padding-left: 120px;
+        >a {
+            font-weight: bold;
+            color: #222;
+            font-size: 17px;
+        }
+        >ul{
+            display: flex;
+            padding-left: 20px;
+            >li{
+                padding-left: 20px;
+                a {
+                    color: #333;
+                    transition: color 0.3s;
+                }
+                
+                a:hover {
+                    color: #377a47;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
 }
+
 
 .best-page{
     width:100%;
