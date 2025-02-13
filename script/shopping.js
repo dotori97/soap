@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
         
         allProducts = products;       
   
-      displayProducts(allProducts, "fillter-list");
+      displayProducts(allProducts, "filter-list");
       })
       .catch(error => {
         console.error("Error fetching products:", error);

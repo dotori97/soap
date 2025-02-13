@@ -1162,7 +1162,6 @@ ul{
     }   
 }
 
-
 .best-page{
     width:100%;
     display: flex;
@@ -1176,4 +1175,47 @@ ul{
 
     gap:20px;
     padding: 20px;
+}
+
+.brand{
+    width:100%;
+    padding-top: 100px;
+    display: flex;
+    
+    .brand-gif{
+        width:60%;
+        background-color: var(--green-color) ;   
+        display: flex;
+        justify-content: end;     
+        img{
+            width:90%;
+        }
+    }
+    .brand-more{
+        width: 40%;
+        background-color: var(--green-color) ;
+        display: flex;
+        flex-direction: column;   
+        align-items: center;
+        button{        
+            width:40%;
+            height:50px;
+            border: 2px solid #7b7b7b;
+            background-color: var(--green-color) ;
+            color:#7b7b7b;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 110px;    
+            cursor: pointerd;    
+        }   
+        >div{
+            padding-top: 150px;
+        }     
+        p{
+            font-size: 19px;
+            padding-bottom: 5px;
+            color:#7b7b7b;
+        }
+    }
+    
 }
