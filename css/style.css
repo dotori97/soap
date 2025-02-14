@@ -1180,6 +1180,7 @@ ul{
 .brand{
     width:100%;
     padding-top: 100px;
+    padding-bottom: 100px;
     display: flex;
     
     .brand-gif{
@@ -1200,21 +1201,22 @@ ul{
         button{        
             width:40%;
             height:50px;
-            border: 2px solid #7b7b7b;
-            background-color: var(--green-color) ;
-            color:#7b7b7b;
+            border: 2px solid #fff;
+            background-color: var(--green-color) ;            
             font-size: 16px;
             border-radius: 5px;
-            margin-top: 110px;    
+            margin-top: 80px;    
             cursor: pointerd;    
+            a{
+                color:#fff;
+            }
         }   
         >div{
-            padding-top: 150px;
+            padding-top: 170px;
         }     
-        p{
-            font-size: 19px;
+        h2{            
             padding-bottom: 5px;
-            color:#7b7b7b;
+            color:#fff;
         }
     }
     
