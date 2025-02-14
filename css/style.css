@@ -348,28 +348,28 @@ ul{
   }
 
   .text7 {
-    font-size: 200px; /* 두 번째 텍스트 크기 */
+    font-size: 90px; /* 두 번째 텍스트 크기 */
     font-weight: 900;
     font-family: 'Nanum';
     color: #ffb70d;
     position: absolute; /* 위치 조정 */
-    top: 70px; /* 두 번째 텍스트 위치 */
-    left: 8%;
+    top: 100px; /* 두 번째 텍스트 위치 */
+    left: 20%;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
   }
 
   .text8 {
-    font-size: 50px; /* 두 번째 텍스트 크기 */
+    font-size: 150px; /* 두 번째 텍스트 크기 */
     font-family: 'Caveat';
     color: #fafafc;
     /* border: 1px solid rgb(57, 85, 63);
     border-radius: 10px;
     background-color: rgb(57, 85, 63); */
     position: absolute; /* 위치 조정 */
-    top: 330px; /* 두 번째 텍스트 위치 */
-    left: 9%;
+    top: 210px; /* 두 번째 텍스트 위치 */
+    left: 8%;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
@@ -377,12 +377,12 @@ ul{
 
   .text9 {
     font-size: 35px; /* 두 번째 텍스트 크기 */
-    font-weight: 400;
-    font-family: 'Poor Story';
-    color: #fafafc;
+    font-weight: 500;
+    /* font-family: 'Poor Story'; */
+    color: #2a6232;
     position: absolute; /* 위치 조정 */
-    top: 420px; /* 두 번째 텍스트 위치 */
-    left: 6%;
+    top: 410px; /* 두 번째 텍스트 위치 */
+    left: 9%;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
@@ -1118,24 +1118,25 @@ ul{
 
 .shopping-list{
     width: 100%;       
-    h2{        
-        padding-top: 50px;
+    >div{        
+        img{
+            width:90%;
+        }
     }    
 }
 
 .shopping-category{
     display: flex;    
-    gap:20px;
-    padding: 40px; 
-    padding-bottom: 60px; 
-    padding-left: 20%;
-    div{
-        display: flex; 
-        flex-direction: column;       
-        padding-left: 5%;
-
+    
+    /* padding-left: 20%; */
+    div:nth-child(1){
+        display: flex;    
+        width:60%;      
+        padding-left: 7%;
         >li{
             display: flex;
+            flex-direction: column;
+            gap:15px;
             >a {
                 font-weight: bold;
                 color: #222;
@@ -1160,6 +1161,19 @@ ul{
             }
         }
     }   
+}
+
+.shopping-category div:nth-child(2){
+    display: flex;
+    width: 40%;
+    li{
+        padding-right: 12%;
+        a{            
+            font-weight: bold;
+            color: #222;
+            font-size: 19px;  
+        }     
+    }    
 }
 
 .best-page{
