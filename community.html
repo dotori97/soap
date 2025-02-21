@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티</title>
+    <link rel="stylesheet" href="css/style.css">        
+</head>
+<body>
+    <h1 class="community-banner">커뮤니티</h1>        
+    <div class="communityContents">   
+        <div class="btn">
+            <button class="gongi-btn">Notice</button>
+            <button class="qna-btn">FAQ</button>
+            <button class="review-btn">Review</button>
+        </div>
+        <div class="contents">     
+            <div class="gongi">
+                <h2>공지사항</h2>
+                <hr>
+                <ul class="notice-list">
+                    <li data-title="📢 신규 고객 혜택 안내" data-content="회원 가입 시 첫 구매 10% 할인 쿠폰 증정 + 무료배송">📢 신규 고객 혜택 안내</li>
+                    <li data-title="🎁 무료 샘플 증정 이벤트" data-content="지금 구매 시 랜덤 샘플 비누 증정!">🎁 무료 샘플 증정 이벤트</li>
+                    <li data-title="🚛 배송 안내" data-content="평일 오후 3시 이전 주문 시 당일 발송됩니다.">🚛 배송 안내</li>
+                    <li data-title="💌 단체 주문 & 기업 협찬 안내" data-content="대량 구매 및 선물용 패키지가 필요하시면 고객센터로 문의 주세요.">💌 단체 주문 & 기업 협찬 안내</li>
+                    <li data-title="📦 교환 및 반품 정책" data-content="개봉하지 않은 제품은 수령 후 7일 이내 교환/반품이 가능합니다.">📦 교환 및 반품 정책</li>
+                    <li data-title="🔄 정기 구독 서비스 준비 중!" data-content="원하는 주기에 맞춰 비누를 정기적으로 받아보는 서비스, 곧 오픈됩니다!">🔄 정기 구독 서비스 준비 중!</li>
+                    <li data-title="🛍 오프라인 팝업 스토어 일정 안내" data-content="02월 28일부터 3월 7일까지 성수동 팝업 스토어 MZX에서 만나요!">🛍 오프라인 팝업 스토어 일정 안내</li>
+                </ul>
+            </div>
+            <div class="qna">
+                <h2>자주 묻는 질문</h2>
+                <hr>
+                <ul class="qna-list">
+                    <li>
+                        <details>
+                            <summary>천연비누의 유통기한은 얼마나 되나요?</summary>
+                            <div class="answer">
+                                <p>천연비누는 방부제가 포함되지 않기 때문에 일반 비누보다 유통기한이 짧습니다.<br> 
+                                    제조일로부터 약 6개월~1년 정도 사용을 권장하며, 직사광선이나 습기가 많은 곳을 피하고 <br> 
+                                    건조한 곳에 보관하면 더 오래 사용할 수 있습니다.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>천연비누는 모든 피부 타입에 사용 가능한가요?</summary>
+                            <div class="answer">
+                                <p>기본적으로 순한 성분으로 만들어져 대부분의 피부 타입에 적합하지만,<br> 
+                                    개인마다 알레르기 반응이 있을 수 있으니 사용 전 성분을 확인하는 것이 좋습니다.<br> 
+                                    특히 민감성 피부라면 샘플을 사용해보거나, 저자극 성분 위주로 선택하는 것이 좋습니다.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>해외에서도 천연비누를 주문할 수 있나요?</summary>
+                            <div class="answer">
+                                <p>국가별 세관 규정이나 배송 기간이 다를 수 있습니다.<br> 
+                                    특히 천연 성분이 포함된 제품은 일부 국가에서 반입 제한이 있을 수 있으므로<br>
+                                    구매 전에 문의하세요.</p>           
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>대량으로 구매하면 배송비가 추가되나요?</summary>
+                            <div class="answer">
+                                <p>대량 구매 시에는 묶음 배송이 가능하지만, 무게와 지역에 따라<br> 
+                                    추가 배송비가 부과될 수도 있으니 사전 문의 바랍니다.</p>
+                            </div>
+                        </details>
+                    </li>                    
+                    <li>
+                        <details>
+                            <summary>보관할 때 특별히 신경 써야 할 점이 있나요?</summary>
+                            <div class="answer">
+                                <p>천연비누는 수분을 잘 흡수하기 때문에 물 빠짐이 좋은 비누 받침을 사용하고,<br> 
+                                    사용 후 건조한 곳에 보관하는 것이 좋습니다.<br> 
+                                    밀폐된 용기보다는 공기가 잘 통하는 곳에 두면 오래 사용할 수 있습니다.</p>
+                            </div>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+            <div class="review">       
+                <h2>사용 후기</h2>
+                <button id="openModal">작성하기</button> 
+                <hr>
+                <div class="review-dummy">
+                    <div class="review-card">
+                        <img src="images/review1.jpg" alt="후기 이미지">
+                        <P>아이가 아토피가 있어 한방 성분 비누를 찾다가 홍삼비누를 알게 됐어요. 부드러운 거품이 아이 피부에 순하게 닿는 느낌이 좋아요. 저도 같이 쓰는데 촉촉하고 탄력이 느껴져서 만족스럽습니다.</p>
+                        <p>작성자: 햇살오후 </p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>      
+                    <div class="review-card">
+                        <img src="images/review4.jpg" alt="후기 이미지">
+                        <P>운동 후 땀 때문에 트러블이 자주 올라왔는데, 천궁비누를 쓰고 나서 땀을 닦아내는 느낌도 개운하고 피부가 덜 번들거려요. 특히 코 주변이 항상 기름졌는데 요즘은 매끈해졌어요. 산뜻한 느낌, 강추합니다!</p>
+                        <p>작성자: 나야나  </p>
+                        <p>⭐⭐⭐⭐☆</p>
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>   
+                    <div class="review-card">
+                        <img src="images/review5.jpg" alt="후기 이미지">
+                        <P>등산 후에는 늘 피부가 따갑고 붉어졌는데, 쑥비누로 씻으면 피부가 금세 진정되더라고요. 성분이 순해서 저처럼 민감한 피부에도 안심하고 쓸 수 있어서 좋아요</p>
+                        <p>작성자: 새벽달빛 </p>
+                        <p>⭐⭐⭐⭐☆</p>
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>   
+                    <div class="review-card">
+                        <img src="images/review6.jpg" alt="후기 이미지">
+                        <P>시험 준비 때문에 밤낮으로 공부하다 보니 피부가 엉망이었는데, 감초비누를 쓰고 트러블이 정말 많이 가라앉았어요! 거울 볼 때마다 기분 좋아요. 게다가 은은한 향까지 대박이에요.</p>
+                        <p>작성자: 초코냥이 </p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>   
+                    <div class="review-card">
+                        <img src="images/review7.jpg" alt="후기 이미지">
+                        <P>엄마가 사준 천연비누로 씻으니까 피부가 부드럽고 좋아졌어요. 가끔 간지럽던 것도 없어졌어요. 향기도 좋아서 매일 씻고 싶어요!</p>
+                        <p>작성자: 별빛요정 </p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>   
+                    <div class="review-card">
+                        <img src="images/review8.jpg" alt="후기 이미지">
+                        <P>건조한 겨울철이 되면 피부가 특히 가렵고 각질이 생겼는데, 홍삼비누는 씻고 나면 피부가 정말 촉촉합니다. 향도 은은해서 욕실에 오래 머물고 싶을 정도예요.</p>
+                        <p>작성자: 느림보거북 </p>
+                        <p>⭐⭐⭐⭐☆</p>
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>   
+                    <div class="review-card">
+                        <img src="images/review2.jpg" alt="후기 이미지">
+                        <P>피부가 나이 들어 건조하고 푸석했는데, 유자비누를 쓰고 보습이 정말 잘 돼요. 피부가 촉촉하고 밝아지는 느낌입니다. 아내도 향이 좋다며 같이 쓰기 시작했어요.</p>
+                        <p>작성자: 달다숲속 </p>
+                        <p>⭐⭐⭐⭐☆</p>
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>   
+                    <div class="review-card">
+                        <img src="images/review3.jpg" alt="후기 이미지">
+                        <P>한방 비누라서 처음엔 조금 생소했는데, 유자비누의 상큼한 향에 완전 반했어요! 거품도 부드럽고 피부가 진짜 환해지는 느낌. 사진 찍을 때 피부가 너무 좋아 보여서 SNS에 인증샷 올리기도 했답니다!</p>
+                        <p>작성자: 킨디러버 </p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>                 
+                </div>
+                <div id="reviewsContainer"></div>
+            </div>  
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeBtn">X</button>
+        <h3 id="noticeTitle"></h3>
+        <p id = "noticeContent"></p>
+    </div>
+
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Review</h2>
+            <!-- <input type="text" id="reviewTitle" placeholder="제목을 입력하세요"> -->
+            <input type="text" id="reviewAuthor" placeholder="아이디를 입력하세요">
+            <textarea id="reviewContent" placeholder="내용을 입력하세요"></textarea>
+            <input type ="file" id="reviewImage">
+            <div class="stars">
+                <span data-value="1">☆</span>
+                <span data-value="2">☆</span>
+                <span data-value="3">☆</span>
+                <span data-value="4">☆</span>
+                <span data-value="5">☆</span>
+            </div>
+            <button id="saveReview">저장</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script/header.js"></script>
+    <script src="script/community.js"></script>
+</body>
+</html>

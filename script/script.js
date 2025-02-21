@@ -421,6 +421,7 @@ fetch('products.json')
        <div class="product-card">
          <a href="product.html?id=${product.id}">
            <img src="${product.image}" alt="${product.name}" width="300">
+           ${elementId === "recommend-list"? `<P class="type">${product.skin_type}</p>`: ""}
            <h2>${product.name}</h2>
            <p>정가: ${product.price}원</p>
            <p>할인가: ${product.dc_price}원</p>          
@@ -446,6 +447,7 @@ fetch('products.json')
       visibleRecommendCount = recommendedProducts.length;
       displayProducts(recommendedProducts.slice(0, visibleRecommendCount), "recommend-list");
     });
+   
 
 });
 
