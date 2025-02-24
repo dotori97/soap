@@ -37,8 +37,37 @@ ul{
 .header-container{
     position: sticky;
     top: 0;
-    z-index: 99;   
+    z-index: 99;       
 }
+
+.about{
+    position: relative;
+}
+.click{
+    position: absolute;
+    width:10px;
+    height:10px;
+    background-color: #6e9f20;
+    border-radius: 50%;
+    z-index: 990;    
+    /* margin-left: 76%;
+    margin-top: -80px; */
+    
+    bottom: 50%; /* about 요소의 위쪽에 배치 */
+    left: 50%; /* about 메뉴의 중앙 정렬 */
+    transform: translateX(-50%); 
+   
+    animation: ani 1s alternate ease-out infinite;
+      
+}
+
+@keyframes ani{
+    /* 0% { transform: translateY(0); }
+    100% { transform: translateY(10px);} */
+    0% { transform: translate(-50%, 0); } 
+    100% { transform: translate(-50%, -20px); } /* 위아래로 움직이게 수정 */
+}
+
 .page-header{
     width:100%;
     max-width: 1550px;
